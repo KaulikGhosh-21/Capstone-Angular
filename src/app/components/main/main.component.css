@@ -1,0 +1,12 @@
+div.dark{
+    background-color: black;
+}
+
+div.light{
+    background-color: white;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+}

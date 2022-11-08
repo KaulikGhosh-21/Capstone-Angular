@@ -1,0 +1,29 @@
+
+<div class="container" [ngClass]="theme == 'dark' ? 'dark' : 'light'">
+    <div class="left-side">
+        <h2><span class="C">C</span>odeStead's <span class="E">E</span>mployee
+            <br>
+            <span class="M">M</span>anagement <span class="P">P</span>ortal
+            <span class="semicolon">;</span>
+        </h2>
+    </div>
+    <div class="buttons">
+        <app-button 
+            (buttonClick)="newUserClick()"
+            text="New to the organization?"
+        >
+        </app-button>
+        <app-button 
+            (buttonClick)="goToSignin()"
+            *ngIf="!isNewUser"
+            text="Signin as admin?"    
+        >
+        </app-button>
+        <app-button 
+            *ngIf="isNewUser" 
+            (buttonClick)="goToRegister()"
+            text="Register"
+        >
+        </app-button>
+    </div>
+</div>

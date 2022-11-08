@@ -1,0 +1,14 @@
+<div class="header-container" [ngClass]="theme == 'dark' ? 'dark' : 'light'">
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Leave a feedback</a></li>
+        </ul>
+
+        <div class="theme">
+            {{day}} | {{hour}} : {{minute}} : {{seconds}} {{ampm}}
+            <i (click)="switchTheme()" class="fa-solid fa-sun fa-lg"></i>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,14 @@
+button{
+    border: none;
+    background-color: var(--primary-font-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Poppins, sans-serif;
+    transition: transform 0.5s;
+}
+
+button:hover{
+    transform: scale(1.1);
+}

@@ -1,0 +1,58 @@
+@import '../../../styles.css';
+
+div.container{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.container.dark{
+    color: white;
+}
+
+div.container.light{
+    color: black;
+}
+
+div.container .left-side{
+    width: 60%;
+    height: 100%;
+    font-size: 1.2rem;
+    position: relative;
+    letter-spacing: 4px;
+    line-height: 3.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+div.container .left-side span{
+    color: var(--primary-font-color);
+    font-weight: bolder;
+    font-size: 3.5rem;
+}
+
+div.container .left-side .C{ 
+    position: absolute;
+    left: 9rem;
+    top: 1.9rem;
+}
+
+div.container .left-side .semicolon{
+    font-size: 2.5rem;
+    position: absolute;
+    right: 10.5rem;
+    bottom: 1rem;
+}
+
+.buttons{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons :first-child{
+    margin-right: 10px;
+}
+

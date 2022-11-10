@@ -8,7 +8,7 @@ import { ThemeService } from 'src/app/services/theme.service';
 })
 export class MainComponent implements OnInit {
 
-  public theme: string = 'dark';
+  public theme!: string;
 
   constructor(private _themeService: ThemeService) { 
     this._themeService.theme.subscribe(value => this.theme = value);

@@ -5,22 +5,13 @@ import { ActivatedRoute, Router } from '@angular/router'
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-contact-us',
+  templateUrl: './contact-us.component.html',
+  styleUrls: ['./contact-us.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class ContactUsComponent implements OnInit {
 
   public theme: string = "dark";
-
-  name!: string;
-  serviceLine!: string;
-  location!: string;
-  email!: string;
-  password!: string;
-  confirmPassword!: string;
-  doj!: Date;
-  dob!: Date;
 
   constructor(private _alterService: AlterHeaderService, private _router: Router, private _themeService: ThemeService) {
     this._themeService.theme.subscribe(value => this.theme = value);

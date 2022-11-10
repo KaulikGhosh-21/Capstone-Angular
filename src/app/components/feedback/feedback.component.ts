@@ -1,26 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
+
 import { AlterHeaderService } from 'src/app/services/alter-header.service';
 import { ActivatedRoute, Router } from '@angular/router'
 import { ThemeService } from 'src/app/services/theme.service';
 
+
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-feedback',
+  templateUrl: './feedback.component.html',
+  styleUrls: ['./feedback.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class FeedbackComponent implements OnInit {
 
   public theme: string = "dark";
 
-  name!: string;
+  name: string = "Kaulik";
   serviceLine!: string;
   location!: string;
   email!: string;
-  password!: string;
-  confirmPassword!: string;
-  doj!: Date;
-  dob!: Date;
+  feedback!: string;
 
   constructor(private _alterService: AlterHeaderService, private _router: Router, private _themeService: ThemeService) {
     this._themeService.theme.subscribe(value => this.theme = value);

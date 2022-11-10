@@ -1,18 +1,31 @@
 @import '../../../styles.css';
 
+div.home{
+    /* overflow-x: hidden; */
+    background-image: url('https://images.pexels.com/photos/3183181/pexels-photo-3183181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
 div.container{
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    background-color: rgba(0, 0, 0, 0.3);
     min-height: 100vh;
-    min-width: 100vw;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-div.container.dark{
+div.home.light > .container{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.home.dark{
     color: white;
 }
 
-div.container.light{
+div.home.light{
     color: black;
 }
 
@@ -20,30 +33,39 @@ div.container .left-side{
     width: 60%;
     height: 100%;
     font-size: 1.2rem;
-    position: relative;
     letter-spacing: 4px;
     line-height: 3.5rem;
     display: flex;
     justify-content: center;
 }
 
-div.container .left-side span{
+div.container .left-side h2{
+    position: relative;
+}
+
+div.container .left-side h2 .second-line{
+    position: relative;
+    left: 4rem
+}
+
+div.container .left-side .first-line span,
+div.container .left-side .second-line span{
     color: var(--primary-font-color);
     font-weight: bolder;
     font-size: 3.5rem;
 }
 
-div.container .left-side .C{ 
+/* div.container .left-side .C{ 
     position: absolute;
-    left: 9rem;
+    left: 7rem;
     top: 1.9rem;
-}
+} */
 
-div.container .left-side .semicolon{
+div.container .left-side .second-line .semicolon{
     font-size: 2.5rem;
     position: absolute;
-    right: 10.5rem;
-    bottom: 1rem;
+    right: -1rem;
+    bottom: -1rem;
 }
 
 .buttons{

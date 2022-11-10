@@ -1,0 +1,29 @@
+<div class="form-register" [ngClass]="theme == 'dark' ? 'dark' : 'light'">
+    <h2 class="title">Let us know where we can improve<span>?</span></h2>
+    <form>
+        <div class="form-element">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" [(ngModel)]="name" name="name">
+        </div>
+        <div class="form-element">
+            <label for="service-line">Your Service Line:</label>
+            <input type="text" id="service-line" [(ngModel)]="serviceLine" name="serviceLine">
+        </div>
+        <div class="form-element">
+            <label for="location">Your Base Loaction:</label>
+            <input type="text" id="location" [(ngModel)]="location" name="location">
+        </div>
+        <div class="form-element">
+            <label for="email">Your Mail Id:</label>
+            <input type="email" id="email" [(ngModel)]="email" name="email">
+        </div>
+        <div class="form-element">
+            <label for="feedback">Tell us about your problem:</label>
+            <textarea id="feedback" [(ngModel)] = "feedback" name="feedback" rows = 6></textarea>
+        </div>
+        <div class="form-element">
+            <app-button type="submit" text="Register"></app-button>
+        </div>
+    </form>
+</div>
+

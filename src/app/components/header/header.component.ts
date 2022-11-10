@@ -1,5 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit, Pipe } from '@angular/core';
+import { AlterHeaderService } from 'src/app/services/alter-header.service';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
@@ -9,7 +10,9 @@ import { ThemeService } from 'src/app/services/theme.service';
 })
 export class HeaderComponent implements OnInit {
 
-  public theme: string = 'dark';
+  public theme: string = "dark";
+
+  public showHome: boolean = false;
 
   private days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
@@ -23,11 +26,14 @@ export class HeaderComponent implements OnInit {
   public month: any;
   public year: any;
 
-  constructor(private _themeService: ThemeService) {  
+  constructor(private _themeService: ThemeService, private _alterService: AlterHeaderService) {  
     this._themeService.theme.subscribe(value => this.theme = value);
+    this._alterService.showHome.subscribe(value => this.showHome = value);
   }
 
   ngOnInit(): void {
+    let theme: string = localStorage.getItem("theme") as string;
+    this.theme = theme;
     console.log(this.theme)
     setInterval(() => {
       const date = new Date();

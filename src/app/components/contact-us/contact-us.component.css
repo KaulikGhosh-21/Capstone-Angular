@@ -1,0 +1,33 @@
+.contact-us{
+    padding: 11.4rem 3.5rem;
+    min-height: max-content;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-us.dark{
+    background-color: black;
+    color: white;
+}
+
+.title{
+    padding: 1rem 4rem;
+}
+
+.links{
+    display: flex;
+    padding: 1rem 4rem;
+}
+
+.links .link{
+    padding: 0 1.5rem;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.links .link:hover{
+    transform: scale(1.4) rotate(-20deg);
+    color: var(--primary-font-color);
+}

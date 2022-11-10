@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ThemeService } from 'src/app/services/theme.service';
+import { AlterHeaderService } from 'src/app/services/alter-header.service';
 
 
 @Component({
@@ -10,15 +11,30 @@ import { ThemeService } from 'src/app/services/theme.service';
 })
 export class HomeComponent implements OnInit {
 
-  public theme: string = 'dark';
+  public theme: string = "dark";
+
+  public showHome: boolean = false;
 
   isNewUser: boolean = false;
 
-  constructor(private _router: Router, private _route: ActivatedRoute, private _themeService: ThemeService) { 
-    this._themeService.theme.subscribe(value => this.theme = value);
+  constructor(private _router: Router, private _alterService: AlterHeaderService, private _themeService: ThemeService) { 
+    this._themeService.theme.subscribe(value => {
+      this.theme = value;
+      console.log(this.theme)
+    });
+    this._alterService.showHome.subscribe(value => this.showHome = value);
   }
 
   ngOnInit(): void {
+    let theme: string = localStorage.getItem("theme") as string;
+    this.theme = theme;
+
+    let url: string = this._router.url;
+    if(!url.includes("home")){
+      this._alterService.showHomeFunc(true);
+    }else{
+      this._alterService.showHomeFunc(false)
+    }
   }
 
   newUserClick(){

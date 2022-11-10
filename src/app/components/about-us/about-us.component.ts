@@ -1,28 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AlterHeaderService } from 'src/app/services/alter-header.service';
-import { ActivatedRoute, Router } from '@angular/router'
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-about-us',
+  templateUrl: './about-us.component.html',
+  styleUrls: ['./about-us.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class AboutUsComponent implements OnInit {
 
   public theme: string = "dark";
 
-  name!: string;
-  serviceLine!: string;
-  location!: string;
-  email!: string;
-  password!: string;
-  confirmPassword!: string;
-  doj!: Date;
-  dob!: Date;
-
-  constructor(private _alterService: AlterHeaderService, private _router: Router, private _themeService: ThemeService) {
+  constructor(private _themeService: ThemeService, private _router: Router, private _alterService: AlterHeaderService) {
     this._themeService.theme.subscribe(value => this.theme = value);
    }
 

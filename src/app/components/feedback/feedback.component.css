@@ -1,14 +1,21 @@
+.title{
+    margin-right: 5rem;
+    letter-spacing: 2px;
+}
+
+.title span{
+    color: var(--primary-font-color);
+    font-weight: bolder;
+    font-size: 3.5rem;
+}
+
 .form-register{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: max-content;
     margin-top: 0;
-    padding: 8rem 3.5rem;
-}
-
-.title{
-    margin-right: 5rem;
+    padding: 4.5rem 3.5rem;
 }
 
 .form-register.dark{
@@ -33,11 +40,16 @@ form{
     margin-bottom: 1.5rem;
 }
 
+textarea{
+    resize: none;
+}
+
 .form-element label{
     margin-bottom: 0.5rem;
 }
 
-.form-element input{
+.form-element input,
+.form-element textarea{
     display: block;
     padding: 8px 10px;
     width: 20rem;

@@ -14,10 +14,12 @@ export class ThemeService {
 
   switchTheme(){
     this.themeIsDark = !this.themeIsDark;
-    if(this.themeIsDark){
-      this.theme.next("dark");
-    }else{
+    if(!this.themeIsDark){
       this.theme.next("light");
+      localStorage.setItem("theme", "light");
+    }else{
+      this.theme.next("dark");
+      localStorage.setItem("theme", "dark")
     }
   }
 }

@@ -1,0 +1,63 @@
+.about-us-main{
+    padding: 4.5rem 3.5rem;
+    min-height: max-content;
+    margin-top: 0;
+}
+
+.about-us-main.dark{
+    background-color: black;
+    color: white;
+}
+
+.about-us-main.light{
+    background-color: white;
+    color: black;
+}
+
+.title span{
+        color: var(--primary-font-color);
+        font-weight: bolder;
+        font-size: 3.5rem;
+}
+.title{
+    letter-spacing: 0.3rem;
+}
+.about-us{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5rem;
+}
+
+.right{
+    width: 60%;
+}
+
+.cards{
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cards .card{
+    background-color: white;
+    color: var(--primary-font-color);
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cards.light .card{
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.2);;
+}
+
+.card-1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}

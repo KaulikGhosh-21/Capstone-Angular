@@ -1,0 +1,28 @@
+{
+  "admins": [
+    {
+      "id": 1,
+      "name": "Kaulik",
+      "email": "kaulik01ghosh@gmail.com",
+      "password": "kaulik1234"
+    },
+    {
+      "id": 2,
+      "name": "Ipsita",
+      "email": "ipsitaroy@gmail.com",
+      "password": "ipsita1234"
+    },
+    {
+      "id": 3,
+      "name": "Mayank",
+      "email": "mayank21@gmail.com",
+      "password": "mayank21"
+    },
+    {
+      "id": 4,
+      "name": "Gayatri",
+      "email": "gayatri@gmail.com",
+      "password": "gayatri1234"
+    }
+  ]
+}

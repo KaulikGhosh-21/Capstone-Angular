@@ -1,0 +1,161 @@
+.add-employee-back{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    /* backdrop-filter: blur(10px); */
+}
+
+.add-employee{
+    /* display: none; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+
+
+
+
+
+
+.employees{
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+    
+    /* padding: 2rem 1.5rem; */
+}
+
+.employees.blur{
+    filter: blur(10px);
+}
+
+.name-add{
+    display: flex;
+}
+
+button.add{
+    margin-left: 1rem;
+    border: none;
+    background-color: var(--primary-font-color);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Poppins, sans-serif;
+    transition: transform 0.5s;
+}
+
+.employees.dark{
+    color: white;
+    background-color: black;
+}
+
+.employees-inner,
+.heading{
+    max-width: 900px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+}
+
+.heading{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading .search input{
+    padding: 5px 8px;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid  rgba(0, 0, 0, 0.2);
+}
+
+.heading h3{
+    margin: 0;
+    font-size: 1.2rem;
+    align-self: center;
+}
+
+.employees.light .employees-inner,
+.employees.light .heading{
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.employees.light{
+    color: black;
+    background-color: white;
+}
+
+.employees.dark .employee{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.employee{
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); 
+}
+
+.basic{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basic.detailsShowing{
+    margin-bottom: 1.5rem;
+}
+
+
+.employees.light .employee:last-child{
+    border-bottom: none;
+    padding-bottom: 1rem;
+}
+
+.buttons button{
+    margin: 0 1rem;
+}
+
+.name{
+    align-self: center;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+
+.buttons a{
+    text-decoration: none;
+    color: var(--primary-font-color);
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+
+.buttons i{
+    cursor: pointer;
+    transition: transform 0.5s;
+    margin: 0 1.5rem;
+}
+
+.buttons i:first-child{
+    color: greenyellow;
+}
+
+.buttons i:nth-child(2){
+    color: rgba(255, 0, 0, 0.6);
+}
+
+.buttons i:hover{
+    transform: scale(1.1);
+}
+
+i{
+    margin-left: 1rem;
+    cursor: pointer;
+}

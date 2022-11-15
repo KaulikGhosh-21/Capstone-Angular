@@ -15,6 +15,11 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { UsersComponent } from './components/users/users.component';
+import { ErrorComponent } from './components/error/error.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { EmployeeDetailComponent } from './components/employee-detail/employee-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { UsersComponent } from './components/users/users.component';
     AboutUsComponent,
     ContactUsComponent,
     FeedbackComponent,
-    UsersComponent
+    UsersComponent,
+    ErrorComponent,
+    AddEmployeeComponent,
+    EditEmployeeComponent,
+    BannerComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule,

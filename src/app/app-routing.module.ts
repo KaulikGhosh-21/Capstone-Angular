@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
+import { EmployeeDetailComponent } from './components/employee-detail/employee-detail.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HomeComponent } from './components/home/home.component';
 import { MainComponent } from './components/main/main.component';
@@ -46,6 +49,18 @@ const routes: Routes = [
       {
         path: "employees",
         component: UsersComponent
+      },
+      {
+        path: "employees/add-employee",
+        component: AddEmployeeComponent
+      },
+      {
+        path: "employees/edit/:empId",
+        component: EditEmployeeComponent
+      },
+      {
+        path: "employees/detail/:empId",
+        component: EmployeeDetailComponent
       }
     ]
   }

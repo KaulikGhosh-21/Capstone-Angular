@@ -1,20 +1,50 @@
 <div class="form-register" [ngClass]="theme == 'dark' ? 'dark' : 'light'">
     <h2 class="title">Register here.</h2>
-    <form>
+    <form (ngSubmit)="onRegisterFormSubmit(registerForm)" #registerForm="ngForm">
         <div class="form-elements">
             <div class="form-element">
-                <label for="name">Your Name:</label>
+                <label for="firstName">First Name:</label>
                 <input 
                     type="text" 
-                    id="name" 
-                    #name="ngModel"
-                    [(ngModel)]="name" 
-                    name="name"
+                    id="firstName" 
+                    #empFirstName="ngModel"
+                    required
+                    [ngClass]="{'error': empFirstName.errors && empFirstName.touched && empFirstName.errors['required'] }"
+                    [(ngModel)]="firstName" 
+                    name="firstName"
                 >
+                <!-- {{name}} -->
+                <app-error 
+                    *ngIf="empFirstName.errors && empFirstName.errors['required'] && !empFirstName.untouched"
+                    text="First Name is required"
+                >
+                </app-error>
+            </div>
+            <div class="form-element">
+                <label for="lastName">Last Name:</label>
+                <input 
+                    type="text" 
+                    id="lastName" 
+                    #empLastName="ngModel"
+                    required
+                    [ngClass]="{'error': empLastName.errors && empLastName.touched && empLastName.errors['required'] }"
+                    [(ngModel)]="lastName" 
+                    name="lastName"
+                >
+                <!-- {{name}} -->
+                <app-error 
+                    *ngIf="empLastName.errors && empLastName.errors['required'] && !empLastName.untouched"
+                    text="Last Name is required"
+                >
+                </app-error>
             </div>
             <div class="form-element">
                 <label for="gender">Your Gender:</label>
-                <select id="gender">
+                <select 
+                    id="gender" 
+                    (change)="onChange($event)"
+                    required
+                >
                     <option selected>Select one</option>
                     <option value="Male" name="male">Male</option>
                     <option value="Female" name="female">Female</option>
@@ -22,36 +52,155 @@
             </div>
             <div class="form-element">
                 <label for="dob">Your Date of birth:</label>
-                <input type="date" id="dob" [(ngModel)]="dob" name="dob">
+                <input 
+                    type="date" 
+                    id="dob" 
+                    [(ngModel)]="dob" 
+                    name="dob"
+                    required
+                    #dateOfBirth="ngModel"
+                    [ngClass]="{'error': dateOfBirth.errors && dateOfBirth.touched && dateOfBirth.errors['required']}"
+                >
+                <app-error 
+                    *ngIf="dateOfBirth.errors && dateOfBirth.errors['required'] && !dateOfBirth.untouched"
+                    text="Date of Birth is required"
+                >
+                </app-error>
+                <!-- {{dob}} -->
             </div>
             <div class="form-element">
                 <label for="doj">Your Date of joining:</label>
-                <input type="date" id="doj" [(ngModel)]="doj" name="doj">
+                <input 
+                    type="date" 
+                    id="doj" 
+                    [(ngModel)]="doj" 
+                    name="doj"
+                    required
+                    #dateOfJoining="ngModel"
+                    [ngClass]="{'error': dateOfJoining.errors && dateOfJoining.touched && dateOfJoining.errors['required']}"    
+                >
+                <app-error 
+                    *ngIf="dateOfJoining.errors && dateOfJoining.errors['required'] && !dateOfJoining.untouched"
+                    text="Date of Joining is required"
+                >
+                </app-error>
             </div>
-            <div class="form-element">
+            <!-- <div class="form-element">
                 <label for="service-line">Your Service Line:</label>
-                <input type="text" id="service-line" [(ngModel)]="serviceLine" name="serviceLine">
-            </div>
+                <input 
+                    type="text" 
+                    id="service-line" 
+                    [(ngModel)]="serviceLine" 
+                    name="serviceLine"
+                    required
+                    #serviceLineVar="ngModel"
+                    [ngClass]="{'error': serviceLineVar.errors && serviceLineVar.touched && serviceLineVar.errors['required']}"
+                >
+                <app-error 
+                    *ngIf="serviceLineVar.errors && serviceLineVar.errors['required'] && !serviceLineVar.untouched"
+                    text="Service Line is required"
+                >
+                </app-error>
+            </div> -->
             <div class="form-element">
                 <label for="location">Your Base Loaction:</label>
-                <input type="text" id="location" [(ngModel)]="location" name="location">
+                <input 
+                    type="text" 
+                    id="location" 
+                    [(ngModel)]="location" 
+                    required
+                    #locationVar="ngModel"
+                    [ngClass]="{'error': locationVar.errors && locationVar.touched && locationVar.errors['required']}"  
+                    name="location">
+                <app-error 
+                    *ngIf="locationVar.errors && locationVar.errors['required'] && !locationVar.untouched"
+                    text="Location field is required"
+                >
+                </app-error>
             </div>
             <div class="form-element">
                 <label for="email">Your Mail Id:</label>
-                <input type="email" id="email" [(ngModel)]="email" name="email">
+                <input 
+                    (change)="handleEmailChange(registerForm)"
+                    type="email" 
+                    id="email" 
+                    [(ngModel)]="email" 
+                    name="email"
+                    required
+                    #emailVar="ngModel"
+                    [ngClass]="{'error': emailVar.errors && emailVar.touched && emailVar.errors['required']}"    
+                >
+                <app-error 
+                    *ngIf="emailVar.errors && emailVar.errors['required'] && !emailVar.untouched"
+                    text="Email field is required"
+                >
+                </app-error>
+                <app-error 
+                    *ngIf="!isEmailValid && emailVar.touched"
+                    text="Email must be valid"
+                >
+                </app-error>
             </div>
-            <div class="form-element">
+            <!-- <div class="form-element">
                 <label for="password">Your Password:</label>
-                <input type="password" id="password" [(ngModel)]="password" name="password">
-            </div>
-            <div class="form-element">
+                <input 
+                    (change)="handlePasswordChange(registerForm)"
+                    type="password" 
+                    id="password" 
+                    #empPassword="ngModel"
+                    [(ngModel)]="password" 
+                    name="password"
+                    required
+                    [ngClass]="{'error': 
+                    (empPassword.errors && empPassword.touched && empPassword.errors['required'])
+                    || !passwordEqualsConfirmPassword}"
+                >
+                <app-error 
+                    *ngIf="empPassword.errors && empPassword.errors['required'] && !empPassword.untouched"
+                    text="Password field is required"
+                >
+                </app-error>
+                <app-error 
+                    *ngIf="!passwordEqualsConfirmPassword"
+                    text="Password and Confirm password does not match!"
+                >
+                </app-error>
+                <app-error 
+                    *ngIf="!isPasswordValid && empPassword.touched"
+                    text="Password must be alphanumeric and between 8 and 20 charecters"
+                >
+                </app-error>
+                {{password}}
+            </div>-->
+            <!-- <div class="form-element">
                 <label for="confirm-password">Confirm your password:</label>
-                <input type="password" id="confirm-password" [(ngModel)]="confirmPassword" name="confirmPassword">
-            </div>
+                <input 
+                    type="password" 
+                    id="confirm-password" 
+                    [(ngModel)]="confirmPassword" 
+                    name="confirmPassword"
+                    [ngClass]="{'error': 
+                    (confirmPasswordVar.errors && confirmPasswordVar.touched && confirmPasswordVar.errors['required'])
+                    || !passwordEqualsConfirmPassword}"
+                    #confirmPasswordVar="ngModel"
+                    required    
+                >
+                <app-error 
+                    *ngIf="confirmPasswordVar.errors && confirmPasswordVar.errors['required'] && !confirmPasswordVar.untouched"
+                    text="Confirm password field is required"
+                >
+                </app-error>
+                <app-error 
+                    *ngIf="!passwordEqualsConfirmPassword"
+                    text="Password and Confirm password does not match!"
+                >
+                </app-error>
+            </div> -->
         </div>
         
         <div class="form-element">
-            <app-button type="submit" text="Register"></app-button>
+            <button type="submit" [disabled]="!registerForm.form.valid">Register</button>
         </div>
+
     </form>
 </div>

@@ -9,6 +9,14 @@ button{
     transition: transform 0.5s;
 }
 
+button:disabled{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+button:disabled:hover{
+    transform: scale(1);
+}
+
 button:hover{
     transform: scale(1.1);
 }

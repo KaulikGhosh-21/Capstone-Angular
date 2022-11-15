@@ -1,0 +1,30 @@
+.container{
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.employee-detail-container{
+    max-width: 900px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 2.5rem 3rem;
+    margin-top: 4rem;
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.heading h4{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+    margin-bottom: 2.5rem;
+}
+
+p{
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+i{
+    color: var(--primary-font-color);
+    margin-right: 1.5rem;
+}

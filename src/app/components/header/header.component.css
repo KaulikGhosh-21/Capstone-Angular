@@ -38,6 +38,7 @@ li a{
     color: var(--background-color);
     font-weight: 500;
     position: relative;
+    cursor: pointer;
 }
 
 .header-container.dark li a{

@@ -4,7 +4,7 @@
     align-items: center;
     min-height: max-content;
     margin-top: 0;
-    padding: 8rem 3.5rem;
+    padding: 9rem 3.5rem;
 }
 
 .title{
@@ -22,6 +22,7 @@
 }
 
 form{
+    
     border-radius: 10px;
     padding: 20px 25px;
     box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.2);
@@ -31,6 +32,10 @@ form{
     display: flex;
     flex-direction: column;
     margin-bottom: 1.5rem;
+}
+
+.form-element:last-child{
+    margin-bottom: 0;
 }
 
 .form-element label{
@@ -49,4 +54,29 @@ form{
 
 .form-element:last-child{
     margin-top: 10px;
+}
+
+button{
+    border: none;
+    background-color: var(--primary-font-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Poppins, sans-serif;
+    transition: transform 0.5s;
+    width: 50%;
+    margin: auto;
+}
+
+button:disabled{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+button:disabled:hover{
+    transform: scale(1);
+}
+
+button:hover{
+    transform: scale(1.1);
 }

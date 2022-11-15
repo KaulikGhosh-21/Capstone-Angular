@@ -1,3 +1,48 @@
-<div class="employees" *ngFor="let employee of employees">
-    <h4>{{employee.empName}}</h4>
+<div class="employees" [ngClass]="theme == 'dark' ? 'dark' : 'light'">
+    <!-- <div class="add-employee-back">
+        <div class="add-employee">
+            <app-add-employee></app-add-employee>
+        </div>
+    </div> -->
+    
+    <div class="heading">
+        <div class="name-add">
+            <h3>{{employees.length}} employees found</h3>
+            <button class="add" (click)="addEmployee()">Add employee</button>
+        </div>
+        
+        <div class="search">
+            <input 
+                *ngIf="toShowSearchBar"
+                type="text"
+                [(ngModel)]="search"
+                (ngModelChange)="seeSearchBar($event)"
+                name="search"
+            >
+            <!-- {{search}} -->
+            <i 
+                class="fa-solid fa-magnifying-glass" 
+                (click)="searchClicked()"
+                [ngClass]="toShowSearchBar ? 'fa-md' : 'fa-lg'"
+            >
+            </i>
+        </div>
+    </div>
+    <div class="employees-inner">
+        <div class="employee" *ngFor="let employee of filteredEmployees">
+            <div class="basic" [ngClass]="toShowDetail ? 'detailsShowing' : ''">
+                <h4 class="name">{{employee.firstName}} {{employee.lastName}}</h4>
+                <div class="buttons">
+                    <i class="fa-solid fa-user-pen fa-lg" (click)="goToEdit(employee)"></i>
+                    <i class="fa-sharp fa-solid fa-trash fa-lg" (click)="deleteEmployee(employee)"></i>
+                    <a (click)="goToDetail(employee)">See More</a>
+                </div>
+            </div>
+            <div *ngIf="toShowDetail" class="details">
+                {{employee.firstName}}
+            </div>
+        </div>
+    </div>
+    
+    
 </div>

@@ -1,11 +1,9 @@
 export interface Employee{
-    empId?: number,
-    empName: string,
-    gender: string,
+    id?: number,
+    firstName: string,
+    lastName: string,
+    emailId: string,
+    locationBase: string,
     dob: Date,
-    doj: Date,
-    serviceLine: string,
-    location: string,
-    email: string,
-    password: string
+    doj: Date
 }

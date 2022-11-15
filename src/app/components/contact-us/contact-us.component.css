@@ -1,6 +1,6 @@
 .contact-us{
-    padding: 11.4rem 3.5rem;
-    min-height: max-content;
+    /* padding: 11.4rem 3.5rem; */
+    min-height: 100vh;
     margin-top: 0;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,12 @@
 }
 
 .title{
-    padding: 1rem 4rem;
+    /* padding: 1rem 4rem; */
+    margin-bottom: 3rem;
+}
+
+.title h2{
+    font-size: 2rem;
 }
 
 .links{
@@ -21,13 +26,21 @@
     padding: 1rem 4rem;
 }
 
-.links .link{
+.links .link i{
     padding: 0 1.5rem;
     cursor: pointer;
     transition: transform 0.5s;
 }
 
-.links .link:hover{
+.contact-us.dark .links .link a{
+    color: white;
+}
+
+.contact-us.light .links .link a{
+    color: black;
+}
+
+.links .link i:hover{
     transform: scale(1.4) rotate(-20deg);
     color: var(--primary-font-color);
 }

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ThemeService } from 'src/app/services/theme.service';
 import { AlterHeaderService } from 'src/app/services/alter-header.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -10,6 +11,8 @@ import { AlterHeaderService } from 'src/app/services/alter-header.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  signedInAdminName: string | null = "";
 
   public theme: string = "dark";
 
@@ -26,6 +29,14 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    if(localStorage.getItem("someoneSignedIn") == 'true' && localStorage.getItem("adminSignedIn") !== null){
+      console.log("Hello")
+      this.signedInAdminName = localStorage.getItem("adminSignedIn");
+      console.log(this.signedInAdminName)
+    }
+
+
     let theme: string = localStorage.getItem("theme") as string;
     this.theme = theme;
 
@@ -47,6 +58,18 @@ export class HomeComponent implements OnInit {
 
   goToRegister(){
     this._router.navigate(["register"])
+  }
+
+  simpleAlert(){
+
+    Swal.fire("Hello World")
+
+  }
+
+  successAlert(){
+
+    Swal.fire("Thank You",'You Submitted Successfully','success')
+
   }
 
 }

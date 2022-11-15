@@ -2,19 +2,16 @@
 
     <div class="container">
         <div class="left-side">
-            <h2>
-                <span class="first-line">
-                    <span class="C">C</span>odeStead's <span class="E">E</span>mployee
-                </span>
-                <br>
-                <span class="second-line">
-                    <span class="M">M</span>anagement <span class="P">P</span>ortal
-                    <span class="semicolon">;</span>
-                </span>
+            <h2 class="first-line">
+                <span class="C">C</span>odeStead's <span class="E">E</span>mployee
+            </h2>
+            <h2 class="second-line">
+                <span class="M">M</span>anagement <span class="P">P</span>ortal
+                <span class="semicolon">;</span>
             </h2>
         </div>
     
-        <div class="buttons">
+        <div *ngIf="signedInAdminName == ''" class="buttons">
             <app-button 
                 (buttonClick)="newUserClick()"
                 text="New to the organization?"
@@ -32,6 +29,9 @@
                 text="Register"
             >
             </app-button>
+        </div>
+        <div *ngIf="signedInAdminName !== ''" class="welcome">
+            <h3>Welcome {{signedInAdminName}}</h3>
         </div>
     </div>
 

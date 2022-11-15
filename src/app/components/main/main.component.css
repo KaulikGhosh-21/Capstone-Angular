@@ -1,6 +1,7 @@
 div.main{
     /* max-width: 1100px;
     margin: auto; */
+    position: relative;
 }
 div.dark{
     background-color: black;

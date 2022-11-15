@@ -1,103 +1,31 @@
 {
-    "employees": [
-      {
-        "empId": 10001,
-        "empName": "Shalabh",
-        "gender": "Male",
-        "email": "shalabh@gmail.com",
-        "empSalary": "1235858",
-        "designation": "SDE I",
-        "dob": "2000-02-04",
-        "joiningDate": "2021-05-04",
-        "id": 1
-      },
-      {
-        "empId": 10003,
-        "empName": "Ipsita",
-        "gender": "Female",
-        "email": "ipsita@gmail.com",
-        "empSalary": "125858",
-        "designation": "SDE II",
-        "dob": "2000-05-04",
-        "joiningDate": "2020-06-05",
-        "id": 3
-      },
-      {
-        "empId": 10005,
-        "empName": "Avinash",
-        "gender": "Male",
-        "email": "avinash@gmail.com",
-        "empSalary": "158585",
-        "designation": "Ass. Analyst I",
-        "dob": "2000-08-04",
-        "joiningDate": "2021-05-08",
-        "id": 5
-      },
-      {
-        "empId": 10006,
-        "empName": "Ajit",
-        "gender": "Male",
-        "email": "ajit@gmail.com",
-        "empSalary": "125258",
-        "designation": "SDE III",
-        "dob": "2000-05-04",
-        "joiningDate": "2021-08-05",
-        "id": 6
-      },
-      {
-        "empId": 10007,
-        "empName": "Mayank",
-        "gender": "Male",
-        "email": "mayank@gmail.com",
-        "empSalary": "125858",
-        "designation": "SDE II",
-        "dob": "2000-05-04",
-        "joiningDate": "2020-06-08",
-        "id": 7
-      },
-      {
-        "empId": 10012,
-        "empName": "Shikhar",
-        "gender": "Male",
-        "email": "sritam@gmail.com",
-        "empSalary": "125242",
-        "designation": "Sr. Analyst",
-        "dob": "2000-02-05",
-        "joiningDate": "2021-05-05",
-        "id": 12
-      },
-      {
-        "empId": 10013,
-        "empName": "Sanajy",
-        "gender": "Male",
-        "email": "sanjay@gmail.com",
-        "empSalary": "125858",
-        "designation": "Ass. Analyst I",
-        "dob": "2000-02-05",
-        "joiningDate": "2020-02-05",
-        "id": 13
-      },
-      {
-        "empId": 10014,
-        "empName": "Ritesh",
-        "gender": "Male",
-        "email": "ritesh@gmail.com",
-        "empSalary": "125285",
-        "designation": "Ass. Analyst I",
-        "dob": "2000-05-04",
-        "joiningDate": "2020-08-06",
-        "id": 14
-      },
-      {
-        "empId": 10015,
-        "empName": "Shardul",
-        "gender": "Male",
-        "email": "shardul@gmail.com",
-        "empSalary": "125258",
-        "designation": "Ass. Analyst II",
-        "dob": "2000-05-04",
-        "joiningDate": "2020-06-05",
-        "id": 15
-      }
-    ]
-  }
+  "employees": [
+    {
+      "id": 10009,
+      "firstName": "Gayatri",
+      "lastName": "S",
+      "email": "gayatri@gmail.com",
+      "location": "Kolkata",
+      "dob": "2022-11-24",
+      "doj": "2022-11-05"
+    },
+    {
+      "id": 10010,
+      "firstName": "Mayank",
+      "lastName": "Pandey",
+      "email": "Mayank@gmail.com",
+      "location": "Kolkata",
+      "dob": "2022-11-12",
+      "doj": "2022-11-11"
+    },
+    {
+      "id": 10011,
+      "firstName": "Meenakshi",
+      "lastName": "R Nair",
+      "email": "meenakshi@gmail.com",
+      "location": "Kolkata",
+      "dob": "2022-11-10",
+      "doj": "2022-11-10"
+    }
+  ]
+}

@@ -32,18 +32,21 @@ div.home.light{
 div.container .left-side{
     width: 60%;
     height: 100%;
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    line-height: 3.5rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 div.container .left-side h2{
     position: relative;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    letter-spacing: 1px;
 }
 
-div.container .left-side h2 .second-line{
+div.container .left-side h2.second-line{
+    /* margin-top: 1rem; */
     position: relative;
     left: 4rem
 }
@@ -63,9 +66,9 @@ div.container .left-side .second-line span{
 
 div.container .left-side .second-line .semicolon{
     font-size: 2.5rem;
-    position: absolute;
+    /* position: absolute;
     right: -1rem;
-    bottom: -1rem;
+    bottom: -1rem; */
 }
 
 .buttons{
@@ -76,5 +79,17 @@ div.container .left-side .second-line .semicolon{
 
 .buttons :first-child{
     margin-right: 10px;
+}
+
+.welcome{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome h3{
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: bold;
 }
 

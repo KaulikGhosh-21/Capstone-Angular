@@ -15,7 +15,7 @@ export class FeedbackComponent implements OnInit {
 
   public theme: string = "dark";
 
-  name: string = "Kaulik";
+  name!: string;
   serviceLine!: string;
   location!: string;
   email!: string;
